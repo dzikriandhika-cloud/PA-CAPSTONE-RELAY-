@@ -241,6 +241,23 @@ Pada class ini terdapat beberapa proses utama:
 
 **4. Penghapusan Data dan Pengelolaan Transaksi**
 <img width="960" height="504" alt="Screenshot 2026-11-05 211339" src="https://github.com/user-attachments/assets/da2dc545-9f19-44ad-8a0a-252e9a43bfe6" />
+### 5.4 Ringkasan Implementasi DAO
+
+Selain PengirimanDAO, aplikasi RELAY juga memiliki beberapa
+class DAO yang digunakan untuk mengelola data pada database
+menggunakan Hibernate.
+
+Class DAO yang digunakan meliputi:
+
+1. **PesananDAO:** Mengelola data pesanan pelanggan.
+2. **PenggunaDAO:** Mengelola data pengguna dan proses autentikasi.
+3. **LayananDAO:** Mengelola data layanan pengiriman.
+4. **LokasiDAO:** Mengelola data lokasi operasional, cabang, dan agen.
+5. **PembayaranDAO:** Mengelola data transaksi pembayaran.
+6. **TarifWilayahDAO:** Mengelola tarif pengiriman berdasarkan wilayah.
+
+Setiap class DAO memiliki fungsi pengelolaan data sesuai
+dengan entitas masing-masing melalui Hibernate.
 
 
 
