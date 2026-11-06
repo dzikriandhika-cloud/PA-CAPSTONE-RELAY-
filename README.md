@@ -81,6 +81,21 @@ Encapsulation diterapkan dengan menggunakan atribut `private` pada class
 model dan menyediakan method getter serta setter untuk mengakses atau
 mengubah nilai atribut. Contohnya terdapat pada class `Pengguna`,
 `Pesanan`, `Pengiriman`, `Pembayaran`, dan class model lainnya.
+### Dokumentasi Penerapan Encapsulation
+
+Konsep Encapsulation pada aplikasi RELAY diterapkan dalam class `Pengguna.java`. Atribut pengguna dideklarasikan menggunakan access modifier `private` untuk membatasi akses langsung dari luar class.
+
+Untuk mengakses dan mengubah nilai atribut, class menyediakan method getter dan setter. Dengan penerapan ini, pengelolaan data pengguna menjadi lebih terstruktur.
+
+
+**1. Penerapan Private Attribute**
+
+<img width="450" alt="Private Attribute Pengguna.java" src="https://github.com/user-attachments/assets/51aa746a-d8f0-4e6b-82f3-7e51c0534c32" />
+
+**2. Implementasi Getter dan Setter**
+
+<img width="450" alt="Getter dan Setter Pengguna.java" src="https://github.com/user-attachments/assets/cbed3159-86fa-42f5-bdd5-ea2e893a2930" />
+
 
 ### 4.2 Inheritance
 
@@ -94,6 +109,19 @@ Pada pemetaan Hibernate, pewarisan tersebut menggunakan strategi
 `InheritanceType.JOINED`, sehingga data umum lokasi disimpan pada tabel
 induk dan data khusus disimpan pada tabel turunan.
 
+
+**Dokumentasi Penerapan Inheritance**
+
+Konsep Inheritance pada aplikasi RELAY diterapkan melalui class `Cabang` yang mewarisi class `LokasiOperasional` menggunakan keyword `extends`. Dengan pewarisan ini, class `Cabang` dapat menggunakan atribut dan method yang diwariskan dari class induknya serta memiliki atribut khusus seperti `kodeCabang`, `namaAdminCabang`, dan `statusOperasional`.
+
+**1. Implementasi Inheritance pada Cabang.java**
+
+<img width="434" height="260" alt="Screenshot 2026-11-06 114143" src="https://github.com/user-attachments/assets/12e9c48d-83e4-410d-94f7-79c4dae42cc3" />
+
+
+
+
+
 ### 4.3 Abstraction
 
 Abstraction diterapkan melalui interface generik `Repository<T>` yang
@@ -106,6 +134,17 @@ mendefinisikan operasi dasar penyimpanan data, yaitu:
 Interface ini menjadi kontrak bagi class DAO yang mengelola data
 masing-masing entitas.
 
+**Dokumentasi Penerapan Abstraction**
+
+Konsep Abstraction pada aplikasi RELAY diterapkan melalui interface `Repository<T>` yang mendefinisikan operasi dasar pengelolaan data, yaitu `tambah()`, `ubah()`, dan `tampilkanSemua()`.
+
+Interface ini hanya menentukan method yang harus disediakan, sedangkan implementasinya dilakukan oleh class DAO seperti `PengirimanDAO`, `PesananDAO`, dan `PenggunaDAO`. Dengan demikian, proses pengelolaan data memiliki struktur yang konsisten.
+
+**1. Implementasi Abstraction pada Repository.java**
+
+<img width="274" height="111" alt="Screenshot 2026-11-06 114851" src="https://github.com/user-attachments/assets/39f4aa3b-7de1-485c-b604-9c2cd47c4f8a" />
+
+
 ### 4.4 Polymorphism
 
 Polymorphism diterapkan melalui implementasi interface `Repository<T>`
@@ -114,62 +153,26 @@ oleh beberapa class DAO, seperti `PenggunaDAO`, `PesananDAO`,
 `TarifWilayahDAO`. Setiap DAO menyediakan implementasi operasi
 repository sesuai jenis data yang dikelolanya.
 
+
+**Dokumentasi Penerapan Polymorphism**
+
+Konsep Polymorphism pada aplikasi RELAY didukung oleh penggunaan interface `Repository<T>` yang diimplementasikan oleh berbagai class DAO, seperti `PengirimanDAO`, `PesananDAO`, dan `PenggunaDAO`.
+
+Setiap class DAO menyediakan implementasi method yang sama, seperti `tambah()`, `ubah()`, dan `tampilkanSemua()`, tetapi bekerja dengan jenis entitas yang berbeda. Melalui interface `Repository<T>`, objek DAO dapat digunakan melalui tipe interface yang sama.
+
+**1. Implementasi Polymorphism pada PengirimanDAO.java**
+
+<img width="274" height="111" alt="Screenshot 2026-11-06 114851" src="https://github.com/user-attachments/assets/7f252b60-bdee-4e12-9d57-121e62a6a05a" />
+
+
+
 ## 5. Arsitektur dan Struktur Package
 
 Aplikasi memisahkan tanggung jawab program ke dalam beberapa package:
 
-``` text
-Relay-Kel6/
-├── pom.xml
-├── lib/
-│   └── unknown/
-│       └── binary/
-│           └── AbsoluteLayout/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   ├── config/
-│       │   │   ├── HibernateUtil.java
-│       │   │   └── SesiPengguna.java
-│       │   ├── controller/
-│       │   │   ├── AgenController.java
-│       │   │   ├── CabangController.java
-│       │   │   ├── LoginController.java
-│       │   │   ├── PelangganController.java
-│       │   │   ├── PusatController.java
-│       │   │   └── RegistrasiController.java
-│       │   ├── dao/
-│       │   │   ├── Repository.java
-│       │   │   ├── LayananDAO.java
-│       │   │   ├── LokasiDAO.java
-│       │   │   ├── PembayaranDAO.java
-│       │   │   ├── PenggunaDAO.java
-│       │   │   ├── PengirimanDAO.java
-│       │   │   ├── PesananDAO.java
-│       │   │   └── TarifWilayahDAO.java
-│       │   ├── main/
-│       │   │   └── Main.java
-│       │   ├── model/
-│       │   │   ├── Agen.java
-│       │   │   ├── Cabang.java
-│       │   │   ├── Layanan.java
-│       │   │   ├── LokasiOperasional.java
-│       │   │   ├── Pembayaran.java
-│       │   │   ├── Pengguna.java
-│       │   │   ├── Pengiriman.java
-│       │   │   ├── Pesanan.java
-│       │   │   ├── PesananId.java
-│       │   │   └── TarifWilayah.java
-│       │   └── view/
-│       │       ├── LoginView.java
-│       │       ├── RegistrasiPelangganView.java
-│       │       ├── PelangganView.java
-│       │       ├── AgenView.java
-│       │       └── ... (form tampilan lainnya)
-│       └── resources/
-│           └── hibernate.cfg.xml
-└── relay.sql
-```
+**Dokumentasi Struktur Package Aplikasi RELAY**
+
+<img width="350" alt="Screenshot 2026-11-06 112528" src="https://github.com/user-attachments/assets/33eb338c-6be4-4926-88f2-f1cdc85f3eb4" />
 
 Keterangan package:
 
