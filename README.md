@@ -162,7 +162,8 @@ Setiap class DAO menyediakan implementasi method yang sama, seperti `tambah()`, 
 
 **1. Implementasi Polymorphism pada PengirimanDAO.java**
 
-<img width="274" height="111" alt="Screenshot 2026-11-06 114851" src="https://github.com/user-attachments/assets/7f252b60-bdee-4e12-9d57-121e62a6a05a" />
+<img width="436" height="260" alt="Screenshot 2026-11-06 122653" src="https://github.com/user-attachments/assets/98e62c78-a7c4-4fe0-8e95-6d63d56cda94" />
+
 
 
 
@@ -197,7 +198,9 @@ Pada class ini terdapat beberapa proses utama:
 5. **Penanganan Kesalahan:** Menggunakan `try-catch` untuk menangani kesalahan ketika proses inisialisasi aplikasi berlangsung.
 
 **Dokumentasi Source Code Main.java**
-<img width="960" height="504" alt="Screenshot 2026-11-05 205325" src="https://github.com/user-attachments/assets/2dc94f89-b894-4df1-8dce-dfce792697ca" />
+
+<img width="463" height="240" alt="Screenshot 2026-11-06 122000" src="https://github.com/user-attachments/assets/4b587899-fc0e-401a-a287-9432a15f307c" />
+
 
 
 ### 5.2 Repository Interface (`Repository.java`)
@@ -213,7 +216,8 @@ Pada interface ini terdapat tiga method utama:
 
 **Dokumentasi Source Code Repository.java**
 
-<img width="960" height="504" alt="Screenshot 2026-11-05 210947" src="https://github.com/user-attachments/assets/0a4e6083-fe99-4038-bbf0-5325de43e42f" />
+<img width="469" height="110" alt="Screenshot 2026-11-06 122151" src="https://github.com/user-attachments/assets/c5975e25-a873-4df4-ba88-381cfb3d56a6" />
+
 
 ### 5.3 Data Access Object (`PengirimanDAO.java`)
 Class `PengirimanDAO` merupakan bagian dari Data Access Object (DAO) yang bertugas mengelola proses akses dan manipulasi data pengiriman pada database. Class ini mengimplementasikan interface `Repository<Pengiriman>` dan menggunakan Hibernate untuk menjalankan operasi database.
@@ -232,18 +236,12 @@ Pada class ini terdapat beberapa proses utama:
 
 **1. Implementasi Repository dan Penambahan Data**
 
-<img width="960" height="504" alt="Screenshot 2026-11-05 211238" src="https://github.com/user-attachments/assets/4011e542-6599-48c8-b761-dccc21da3a30" />
+<img width="451" height="262" alt="Screenshot 2026-11-06 122257" src="https://github.com/user-attachments/assets/9a208d6d-ed30-4155-98d3-09504dd1c977" />
 
+**2. Penghapusan Data dan Pengelolaan Transaksi**
 
-**2. Perubahan, Pencarian, dan Penampilan Data**
-<img width="960" height="504" alt="Screenshot 2026-11-05 211302" src="https://github.com/user-attachments/assets/50caf7ab-f543-401b-8b65-6668b773f181" />
+<img width="430" height="229" alt="Screenshot 2026-11-06 122424" src="https://github.com/user-attachments/assets/27e5ce58-95a7-4740-a01e-87a3f89661a6" />
 
-
-**3. Filter Data Pengiriman**
-<img width="960" height="504" alt="Screenshot 2026-11-05 211333" src="https://github.com/user-attachments/assets/a8de2d54-28e2-42d0-a6af-1fa2bfd81a54" />
-
-**4. Penghapusan Data dan Pengelolaan Transaksi**
-<img width="960" height="504" alt="Screenshot 2026-11-05 211339" src="https://github.com/user-attachments/assets/da2dc545-9f19-44ad-8a0a-252e9a43bfe6" />
 ### 5.4 Ringkasan Implementasi DAO
 
 Selain PengirimanDAO, aplikasi RELAY juga memiliki beberapa
