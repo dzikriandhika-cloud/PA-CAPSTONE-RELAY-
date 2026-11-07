@@ -529,6 +529,24 @@ main.Main
 
 ## 9. Alur Penggunaan Aplikasi
 
+
+### Dokumentasi GUI Halaman Login
+
+1. Buka aplikasi RELAY.
+2. Pada halaman Login, masukkan username dan password sesuai akun yang dimiliki.
+3. Klik tombol **Login** untuk masuk ke aplikasi.
+4. Jika autentikasi berhasil, pengguna diarahkan ke dashboard sesuai perannya, yaitu Pelanggan, Agen, Pusat, atau Cabang.
+5. Klik tombol **Registrasi** jika ingin membuat akun Pelanggan baru.
+6. Klik tombol **Keluar** untuk menutup aplikasi.
+
+**Dokumentasi GUI Halaman Login RELAY**
+
+Halaman Login merupakan tampilan awal aplikasi RELAY yang digunakan untuk melakukan autentikasi pengguna. Halaman ini menyediakan kolom Username dan Password serta tombol Login, Registrasi, dan Keluar. Setelah berhasil login, pengguna akan diarahkan ke halaman utama berdasarkan peran akun masing-masing.
+
+<img width="741" height="386" alt="Screenshot 2026-11-07 140118" src="https://github.com/user-attachments/assets/28d4d1dc-8245-419e-80a2-843462006e1a" />
+
+
+
 ### 9.1 Pelanggan
 
 1.  Buka aplikasi RELAY.
@@ -543,6 +561,18 @@ main.Main
 8.  Buka menu **Riwayat Pesanan** untuk melihat data pesanan.
 9.  Gunakan menu **Kelola Akun** untuk memperbarui informasi akun.
 
+ **Dokumentasi GUI Dashboard Pelanggan**
+
+Dashboard Pelanggan merupakan halaman utama yang ditampilkan setelah pelanggan berhasil login ke aplikasi RELAY. Halaman ini menampilkan ringkasan jumlah pesanan berdasarkan status pengiriman, yaitu Belum Dikirim, Dalam Perjalanan, dan Tiba di Tujuan.
+
+Dashboard juga menyediakan akses cepat ke fitur Kelola Akun, Pesanan, dan Riwayat Pesanan. Pada bagian Pesanan Terbaru, pelanggan dapat melihat informasi pesanan, agen asal, agen tujuan, tanggal, dan status pengiriman.
+
+<img width="779" height="473" alt="Screenshot 2026-11-07 141320" src="https://github.com/user-attachments/assets/1d149e59-1943-4229-b3ca-8a336a683258" />
+
+
+
+
+
 ### 9.2 Agen
 1. Buka aplikasi RELAY.
 2. Login menggunakan akun dengan role Agen.
@@ -552,6 +582,59 @@ main.Main
 6. Melengkapi data tambahan pesanan melalui formulir Agen.
 7. Menyimpan data pesanan yang telah dilengkapi.
 8. Melihat informasi status pengiriman yang tersedia pada aplikasi.
+
+**Dokumentasi GUI Dashboard Agen**
+
+Dashboard Agen merupakan halaman utama yang ditampilkan setelah agen berhasil login ke aplikasi RELAY. Halaman ini menampilkan informasi identitas agen, wilayah kecamatan, jumlah total pesanan, jumlah barang diterima, jumlah pesanan dalam perjalanan, dan jumlah pesanan yang menunggu verifikasi.
+
+Pada halaman ini juga tersedia menu utama, yaitu Dashboard, Kelola Pesanan, dan Terima Barang Cabang. Selain itu, agen dapat melihat daftar data pesanan pelanggan yang sedang dikelola serta menggunakan fitur pencarian untuk menemukan data pesanan tertentu.
+
+<img width="816" height="473" alt="Screenshot 2026-11-07 141650" src="https://github.com/user-attachments/assets/3b56cf08-80b8-4a24-8aa1-b6182ac555aa" />
+
+
+
+
+### 9.3 Pusat
+
+1. Buka aplikasi RELAY.
+2. Login menggunakan username dan password akun dengan role Pusat.
+3. Masuk ke halaman Menu Pusat.
+4. Pilih **Lihat Dashboard** untuk memantau indikator kinerja operasional (KPI).
+5. Pilih **Lihat Laporan** untuk melihat laporan bulanan.
+6. Pilih **Daftarkan Akun** untuk melakukan registrasi akun petugas internal.
+7. Klik **Kembali** untuk kembali ke halaman sebelumnya.
+
+**Dokumentasi GUI Menu Pusat**
+
+Menu Pusat merupakan halaman utama bagi pengguna dengan role Pusat. Halaman ini menyediakan tiga fitur, yaitu Dashboard untuk memantau kinerja operasional, Laporan Bulanan untuk melihat informasi pengiriman, dan Registrasi Internal untuk mendaftarkan akun petugas operasional.
+
+<img width="786" height="473" alt="Screenshot 2026-11-07 140709" src="https://github.com/user-attachments/assets/7c9d68cd-8acf-4765-930b-9bdd9c17bb98" />
+
+
+
+
+### 9.4 Cabang
+
+1. Buka aplikasi RELAY.
+2. Login menggunakan username dan password akun dengan role Cabang.
+3. Masuk ke Dashboard Cabang.
+4. Pilih menu **Pengiriman ke Cabang** untuk mengelola jadwal pengiriman menuju cabang penerima.
+5. Pilih menu **Terima Barang Cabang** untuk mengelola penerimaan barang dari cabang pengirim.
+6. Pilih menu **Kelola Pengiriman ke Agen** untuk mengatur pengiriman menuju agen penerima.
+7. Gunakan kolom pencarian untuk mencari data pengiriman berdasarkan nomor resi.
+8. Klik **Keluar** untuk meninggalkan Dashboard Cabang.
+
+**Dokumentasi GUI Dashboard Cabang**
+
+Dashboard Cabang merupakan halaman utama yang ditampilkan setelah pengguna dengan role Cabang berhasil login ke aplikasi RELAY. Halaman ini menampilkan identitas cabang, lokasi kota, serta ringkasan informasi pengiriman, meliputi total pengiriman, barang diterima cabang, pengiriman dalam perjalanan, dan pengiriman yang telah dijadwalkan.
+
+Dashboard Cabang menyediakan menu Pengiriman ke Cabang, Terima Barang Cabang, dan Kelola Pengiriman ke Agen. Selain itu, terdapat tabel Data Pengiriman yang menampilkan nomor resi, ID pesanan, cabang pengirim, serta cabang tujuan. Fitur pencarian juga disediakan untuk mempermudah pencarian data pengiriman.
+
+<img width="786" height="473" alt="Screenshot 2026-11-07 142011" src="https://github.com/user-attachments/assets/4e6a0def-060b-498f-a57e-ee1a19477267" />
+
+
+
+
 
    
 ## 10. Catatan Implementasi
