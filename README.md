@@ -673,19 +673,26 @@ Pada halaman ini juga tersedia menu utama, yaitu Dashboard, Kelola Pesanan, dan 
 
 ### 9.3 Pusat
 
-1. Buka aplikasi RELAY.
-2. Login menggunakan username dan password akun dengan role Pusat.
-3. Masuk ke halaman Menu Pusat.
-4. Pilih **Lihat Dashboard** untuk memantau indikator kinerja operasional (KPI).
-5. Pilih **Lihat Laporan** untuk melihat laporan bulanan.
-6. Pilih **Daftarkan Akun** untuk melakukan registrasi akun petugas internal.
-7. Klik **Kembali** untuk kembali ke halaman sebelumnya.
+### Dokumentasi GUI Menu Pusat
 
-**Dokumentasi GUI Menu Pusat**
+Menu Pusat merupakan halaman utama aplikasi RELAY yang digunakan oleh pengguna dengan peran Pusat untuk mengakses fitur pengelolaan dan pemantauan operasional pengiriman. Pada halaman ini terdapat tiga menu utama, yaitu Dashboard, Laporan Bulanan, dan Registrasi Internal.
 
-Menu Pusat merupakan halaman utama bagi pengguna dengan role Pusat. Halaman ini menyediakan tiga fitur, yaitu Dashboard untuk memantau kinerja operasional, Laporan Bulanan untuk melihat informasi pengiriman, dan Registrasi Internal untuk mendaftarkan akun petugas operasional.
+**Fungsi setiap menu:**
 
-<img width="786" height="473" alt="Screenshot 2026-11-07 140709" src="https://github.com/user-attachments/assets/7c9d68cd-8acf-4765-930b-9bdd9c17bb98" />
+1. **Dashboard (Lihat Dashboard):** Digunakan untuk membuka halaman ringkasan kinerja operasional perusahaan sehingga pengguna Pusat dapat memantau aktivitas pengiriman.
+
+2. **Laporan Bulanan (Lihat Laporan):** Digunakan untuk mengakses informasi laporan bulanan yang berkaitan dengan jumlah pengiriman dan status pengiriman barang.
+
+3. **Registrasi Internal (Daftarkan Akun):** Digunakan untuk membuka formulir pendaftaran akun petugas operasional, seperti petugas Cabang dan Agen. Pengguna dapat mengisi nama lengkap, username, password, konfirmasi password, memilih peran akun, serta memasukkan informasi Cabang atau Agen.
+
+4. **Kembali:** Digunakan untuk kembali ke halaman sebelumnya.
+
+Melalui menu-menu tersebut, pengguna Pusat dapat mengakses informasi operasional dan melakukan pendaftaran akun internal sesuai kebutuhan aplikasi RELAY.
+
+**Screenshot GUI Menu Pusat:**
+
+<img width="1562" height="1006" alt="WhatsApp Image 2026-11-07 at 22 07 17" src="https://github.com/user-attachments/assets/25fde620-3425-478e-a5da-f330c24eade9" />
+
 
 
 
