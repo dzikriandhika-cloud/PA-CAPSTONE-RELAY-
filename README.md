@@ -173,7 +173,46 @@ Aplikasi memisahkan tanggung jawab program ke dalam beberapa package:
 
 **Dokumentasi Struktur Package Aplikasi RELAY**
 
-<img width="350" alt="Screenshot 2026-11-06 112528" src="https://github.com/user-attachments/assets/33eb338c-6be4-4926-88f2-f1cdc85f3eb4" />
+
+**1. Package Config dan Controller**
+
+Package `config` berfungsi mengelola konfigurasi Hibernate dan sesi pengguna melalui class `HibernateUtil.java` dan `SesiPengguna.java`. Sementara itu, package `controller` bertugas mengatur alur proses aplikasi serta menghubungkan antarmuka pengguna dengan pengolahan data.
+
+<img width="248" height="206" alt="Screenshot 2026-11-07 090942" src="https://github.com/user-attachments/assets/55c7c6b5-38e8-413a-b4f2-c5f8fd731ec9" />
+
+
+
+**2. Package DAO dan Main**
+
+Package `dao` berisi class Data Access Object yang bertugas mengelola akses dan manipulasi data pada database menggunakan Hibernate, seperti `PenggunaDAO`, `PesananDAO`, dan `PengirimanDAO`. Sementara itu, package `main` berisi class `Main.java` yang berfungsi sebagai titik awal untuk menjalankan aplikasi RELAY.
+
+<img width="238" height="216" alt="Screenshot 2026-11-07 090950" src="https://github.com/user-attachments/assets/25e58e18-b23c-499d-9c38-d907c9074b0f" />
+
+
+**3. Package Model dan Util**
+
+Package `model` menyimpan class yang merepresentasikan entitas data aplikasi, seperti pengguna, pesanan, pengiriman, pembayaran, dan layanan. Sementara itu, package `util` menyediakan fungsi pendukung aplikasi melalui class `PasswordHash.java`.
+
+<img width="243" height="211" alt="Screenshot 2026-11-07 091002" src="https://github.com/user-attachments/assets/75a6f168-8fca-463b-8e44-d16b2e6df4f0" />
+
+**4. Package View dan View Agen**
+
+Package `view` menyediakan class antarmuka utama aplikasi, seperti halaman login dan registrasi pelanggan. Sementara itu, package `view.agen` berisi class antarmuka yang mendukung aktivitas Agen, termasuk pengelolaan pesanan dan data pengiriman.
+
+<img width="242" height="219" alt="Screenshot 2026-11-07 091010" src="https://github.com/user-attachments/assets/f98efc94-020a-4a58-8e0f-2e4be0e3ae23" />
+
+**5. Package View Cabang dan View Pelanggan**
+
+Package `view.cabang` berisi class antarmuka untuk mendukung kegiatan operasional Cabang. Sementara itu, package `view.pelanggan` menyediakan halaman untuk membuat pesanan, mengelola informasi akun, dan melihat riwayat pesanan pelanggan.
+
+<img width="247" height="214" alt="Screenshot 2026-11-07 091018" src="https://github.com/user-attachments/assets/6ea17bd1-6b56-41e0-86ca-aacd43ab3656" />
+
+**6. Package View Pusat**
+
+Package `view.pusat` berisi class antarmuka yang dirancang untuk mendukung pengelolaan kegiatan Pusat, seperti dashboard, laporan bulanan, serta registrasi akun internal.
+
+<img width="240" height="160" alt="Screenshot 2026-11-07 091026" src="https://github.com/user-attachments/assets/89eeeffc-e44e-46e9-b606-cf6ba07d47a3" />
+
 
 Keterangan package:
 
@@ -357,26 +396,25 @@ mysql -u root -p relay < relay.sql
 
 ### 8.2 Mengatur Koneksi Database
 
-Buka file:
 
-``` text
-src/main/resources/hibernate.cfg.xml
-```
+**Dokumentasi Konfigurasi Hibernate dan MySQL**
 
-Sesuaikan konfigurasi koneksi dengan MySQL lokal:
+File `hibernate.cfg.xml` digunakan untuk mengatur koneksi aplikasi RELAY dengan database MySQL serta pemetaan entitas Java melalui Hibernate.
 
-``` xml
-<property name="hibernate.connection.driver_class">
-    com.mysql.cj.jdbc.Driver
-</property>
+**1. Konfigurasi Koneksi MySQL**
 
-<property name="hibernate.connection.url">
-    jdbc:mysql://localhost:3306/relay?useSSL=false&amp;serverTimezone=Asia/Jakarta
-</property>
+Screenshot berikut menunjukkan pengaturan JDBC Driver, URL database, username, password, dan dialect MySQL.
 
-<property name="hibernate.connection.username">root</property>
-<property name="hibernate.connection.password">ISI_PASSWORD_MYSQL</property>
-```
+<img width="428" height="233" alt="image" src="https://github.com/user-attachments/assets/7d28e231-bbe2-47b5-b3be-8b163b086c9e" />
+
+
+**2. Pengaturan Hibernate dan Pemetaan Entitas**
+
+Screenshot berikut menunjukkan pengaturan Hibernate dan daftar class model yang dipetakan ke dalam database.
+
+<img width="466" height="183" alt="image" src="https://github.com/user-attachments/assets/35832844-16fb-4662-9e5b-e4ab5d56a4a2" />
+
+
 
 Ganti username dan password sesuai konfigurasi MySQL pada perangkat
 masing-masing. Jangan mengunggah password pribadi atau kredensial
