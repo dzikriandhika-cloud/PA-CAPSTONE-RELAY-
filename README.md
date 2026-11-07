@@ -55,23 +55,37 @@ Objek (PBO) pada struktur aplikasi Java dan konsep Sistem Basis Data
 
 ### 3.2 Fitur Agen
 
-- Login sebagai Agen.
-- Melihat data pesanan dan pengiriman.
-- Menambahkan data/proses pesanan melalui formulir Agen.
-- Mencari data pengiriman berdasarkan nomor resi.
-- Pada proses pesanan, controller memvalidasi data pesanan, berat
-  barang, nomor resi, metode pembayaran, layanan, dan ketersediaan tarif
-  rute.
-- Logika pemrosesan pesanan menyiapkan data pengiriman dan pembayaran
-  serta memperbarui data pesanan dalam satu transaksi database.
+Agen merupakan pengguna yang bertugas mengelola data pesanan pelanggan pada tingkat agen.
 
-### 3.3 Peran Pusat dan Cabang
+Fitur Agen meliputi:
 
-Basis data menyediakan role **Pusat**, **Cabang**, **Agen**, dan
-**Pelanggan**. Controller untuk Pusat dan Cabang juga tersedia pada
-source code. Namun, pada versi source code yang disertakan, alur login
-antarmuka mengarahkan pengguna ke dashboard Pelanggan atau Agen; halaman
-dashboard Pusat dan Cabang belum tersedia pada antarmuka aplikasi.
+- Login menggunakan akun Agen.
+- Melihat data pesanan yang dibuat oleh pelanggan.
+- Menambahkan data pesanan pelanggan dengan melengkapi informasi tambahan yang diperlukan oleh Agen.
+- Melihat status pengiriman untuk mengetahui perkembangan proses pengiriman barang.
+
+### 3.3 Fitur Pusat
+
+Pusat merupakan bagian yang bertanggung jawab terhadap pengelolaan dan pengawasan kegiatan operasional RELAY secara keseluruhan.
+
+Dalam rancangan sistem, peran Pusat meliputi:
+
+- Mengelola informasi operasional yang berkaitan dengan Cabang dan Agen.
+- Memantau kegiatan pengiriman pada jaringan operasional RELAY.
+- Mengelola informasi akun internal sesuai kebutuhan sistem.
+
+
+### 3.4 Fitur Cabang
+
+Cabang merupakan bagian operasional RELAY yang menghubungkan kegiatan pengiriman pada tingkat Pusat dan Agen.
+
+Dalam rancangan sistem, peran Cabang meliputi:
+
+- Mengelola informasi operasional pengiriman yang berkaitan dengan Cabang.
+- Memantau data dan perkembangan status pengiriman.
+- Mendukung koordinasi kegiatan pengiriman antara Pusat dan Agen.
+
+
 
 ## 4. Penerapan Konsep PBO
 
@@ -350,7 +364,9 @@ Flowchart Menu Pelanggan menjelaskan aktivitas yang dapat dilakukan pelanggan da
 
 **4. Flowchart Menu Agen**
 
-Flowchart Menu Agen menggambarkan proses pengelolaan pesanan dan pengiriman pada tingkat Agen. Aktivitas yang dilakukan meliputi penambahan data pesanan, menampilkan dan mencari pesanan, mengubah atau menghapus data pesanan, serta melakukan penerimaan barang dari Cabang. Setiap perubahan data dikelola melalui database RELAY.
+
+Flowchart Menu Agen menggambarkan alur aktivitas Agen dalam mengelola data pesanan pelanggan. Agen dapat melihat data pesanan yang telah dibuat pelanggan, melengkapi informasi tambahan pada pesanan, serta menampilkan status pengiriman. Diagram ini menunjukkan tahapan proses yang berkaitan dengan kegiatan operasional Agen pada sistem RELAY.
+
 
 <img width="11764" height="16384" alt="Flowchart Kelompok 6 Relay-Menu Agen drawio" src="https://github.com/user-attachments/assets/a2883e62-98dd-4a74-a082-f21fae5b745b" />
 
@@ -528,17 +544,16 @@ main.Main
 9.  Gunakan menu **Kelola Akun** untuk memperbarui informasi akun.
 
 ### 9.2 Agen
+1. Buka aplikasi RELAY.
+2. Login menggunakan akun dengan role Agen.
+3. Masuk ke dashboard Agen.
+4. Melihat daftar pesanan yang telah dibuat oleh pelanggan.
+5. Memilih pesanan pelanggan yang perlu diproses.
+6. Melengkapi data tambahan pesanan melalui formulir Agen.
+7. Menyimpan data pesanan yang telah dilengkapi.
+8. Melihat informasi status pengiriman yang tersedia pada aplikasi.
 
-1.  Login menggunakan akun dengan role Agen.
-2.  Masuk ke dashboard Agen.
-3.  Gunakan menu **Tambah Data Pesanan** untuk memproses pesanan
-    pelanggan.
-4.  Isi data yang diperlukan, termasuk berat barang dan metode
-    pembayaran.
-5.  Gunakan menu **Tampilkan Data Pesanan** untuk melihat data
-    pengiriman.
-6.  Gunakan pencarian untuk menemukan data berdasarkan nomor resi.
-
+   
 ## 10. Catatan Implementasi
 
 - Role Pusat dan Cabang sudah tersedia pada rancangan basis data serta
