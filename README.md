@@ -44,6 +44,8 @@ Objek (PBO) pada struktur aplikasi Java dan konsep Sistem Basis Data
 
 ### 3.1 Fitur Pelanggan
 
+Pelanggan merupakan pengguna yang dapat melakukan pemesanan layanan pengiriman surat, dokumen, dan paket melalui aplikasi RELAY. Pelanggan juga dapat melihat riwayat pesanan, memantau status pengiriman, serta mengelola informasi akun.
+
 - Registrasi akun pelanggan.
 - Login menggunakan username dan password.
 - Membuat pesanan pengiriman.
