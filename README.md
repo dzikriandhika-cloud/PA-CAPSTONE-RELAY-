@@ -191,45 +191,121 @@ Aplikasi memisahkan tanggung jawab program ke dalam beberapa package:
 
 **Dokumentasi Struktur Package Aplikasi RELAY**
 
+## 5. Arsitektur dan Struktur Package
 
-**1. Package Config dan Controller**
+Aplikasi RELAY dikembangkan menggunakan bahasa pemrograman Java dengan struktur package yang dipisahkan berdasarkan fungsi dan tanggung jawab masing-masing komponen. Pembagian package ini bertujuan untuk memudahkan pengembangan, pemeliharaan, serta pengelolaan kode program.
 
-Package `config` berfungsi mengelola konfigurasi Hibernate dan sesi pengguna melalui class `HibernateUtil.java` dan `SesiPengguna.java`. Sementara itu, package `controller` bertugas mengatur alur proses aplikasi serta menghubungkan antarmuka pengguna dengan pengolahan data.
+### 1. Package Config dan Controller
 
-<img width="248" height="206" alt="Screenshot 2026-11-07 090942" src="https://github.com/user-attachments/assets/55c7c6b5-38e8-413a-b4f2-c5f8fd731ec9" />
+Package `config` digunakan untuk menyimpan konfigurasi yang diperlukan oleh aplikasi, termasuk pengaturan koneksi dan pengelolaan sesi pengguna. Beberapa class yang terdapat dalam package ini adalah `HibernateUtil.java` dan `SesiPengguna.java`.
+
+Sementara itu, package `controller` berfungsi sebagai penghubung antara antarmuka pengguna dengan proses pengolahan data. Controller menangani permintaan dari pengguna dan mengarahkan proses sesuai kebutuhan masing-masing peran.
+
+Beberapa class yang terdapat dalam package `controller` antara lain:
+- `AgenController.java`
+- `CabangController.java`
+- `LoginController.java`
+- `PelangganController.java`
+- `PusatController.java`
+- `RegistrasiController.java`
+
+**Dokumentasi Package Config:**
+
+<img width="149" height="46" alt="Screenshot 2026-11-07 182933" src="https://github.com/user-attachments/assets/11a8e2b7-9e43-42d7-8f94-8cd18aaeb038" />
+
+
+**Dokumentasi Package Controller:**
+
+<img width="133" height="62" alt="Screenshot 2026-11-07 182958" src="https://github.com/user-attachments/assets/8042ce5d-2f42-4cd1-b4ff-8439dc8f031b" />
+
+
+### 2. Package DAO dan Main
+
+Package `dao` (Data Access Object) digunakan untuk mengelola proses akses data, seperti penyimpanan, pengambilan, pembaruan, dan penghapusan data yang diperlukan oleh aplikasi. Penggunaan DAO membantu memisahkan proses pengelolaan data dari tampilan pengguna.
+
+Package `main` berfungsi sebagai titik awal untuk menjalankan aplikasi RELAY. Di dalam package ini terdapat class `Main.java` yang digunakan untuk memulai program.
+
+**Dokumentasi Package DAO:**
+
+<img width="140" height="100" alt="Screenshot 2026-11-07 183009" src="https://github.com/user-attachments/assets/9b528e37-f5fa-4b9a-930d-b5d4fc2b948c" />
+
+
+**Dokumentasi Package Main:**
+
+<img width="101" height="18" alt="Screenshot 2026-11-07 183027" src="https://github.com/user-attachments/assets/746e44ea-3ddc-45e8-b138-7b2213d4761c" />
+
+
+### 3. Package Model dan Util
+
+Package `model` berfungsi untuk menyimpan class yang merepresentasikan data atau entitas dalam aplikasi RELAY. Class model digunakan untuk mengelola informasi yang berkaitan dengan pengguna, pesanan, pengiriman, pembayaran, dan layanan.
+
+Sementara itu, package `util` menyediakan fungsi pendukung yang dapat digunakan oleh bagian lain dalam aplikasi. Salah satu class yang terdapat pada package ini adalah `PasswordHash.java`, yang berkaitan dengan pengolahan hash kata sandi.
+
+**Dokumentasi Package Model:**
+
+<img width="131" height="101" alt="Screenshot 2026-11-07 183038" src="https://github.com/user-attachments/assets/6685fdd6-aca9-4b43-be90-4d4a36bdb8d9" />
+
+
+**Dokumentasi Package Util:**
+
+<img width="150" height="136" alt="Screenshot 2026-11-07 183104" src="https://github.com/user-attachments/assets/1ce19bb8-1fb4-4f12-90d9-64d75824f663" />
+
+
+### 4. Package View dan View Agen
+
+Package `view` digunakan untuk menyimpan class antarmuka utama yang berinteraksi langsung dengan pengguna. Pada struktur project RELAY, package ini memuat `LoginView.java` untuk tampilan login dan `RegistrasiPelangganView.java` untuk tampilan registrasi pelanggan.
+
+Sementara itu, package `view.agen` berisi class antarmuka yang digunakan oleh pengguna dengan peran Agen. Antarmuka tersebut mendukung aktivitas operasional agen, termasuk pengelolaan pesanan dan pengiriman sesuai fungsi yang tersedia dalam aplikasi.
+
+**Dokumentasi Package View:**
+
+<img width="134" height="28" alt="Screenshot 2026-11-07 183121" src="https://github.com/user-attachments/assets/098393f1-46bc-4820-b77a-6acd10591a24" />
+
+
+**Dokumentasi Package View Agen:**
+
+<img width="139" height="35" alt="Screenshot 2026-11-07 183130" src="https://github.com/user-attachments/assets/b67e7d0d-b113-40c2-9af5-f0100c5489b2" />
+
+
+### 5. Package View Cabang dan View Pelanggan
+
+Package `view.cabang` berisi class antarmuka yang digunakan untuk mendukung kegiatan operasional Cabang. Beberapa class dalam package ini meliputi:
+- `CabangView.java`
+- `KelolaPengirimanKeAgenView.java`
+- `KelolaPengirimanKeCabangView.java`
+- `TerimaBarangCabangView.java`
+
+Class tersebut menyediakan antarmuka untuk kegiatan cabang, termasuk pengelolaan pengiriman dan penerimaan barang.
+
+Sementara itu, package `view.pelanggan` menyediakan antarmuka yang digunakan pelanggan untuk menjalankan berbagai aktivitas dalam aplikasi. Beberapa class yang terdapat dalam package ini adalah:
+- `BuatPesananView.java`
+- `KelolaAkunPelangganView.java`
+- `PelangganView.java`
+- `RiwayatPesananView.java`
+
+Melalui antarmuka tersebut, pelanggan dapat mengakses halaman utama, membuat pesanan, mengelola informasi akun, dan melihat riwayat pesanan.
+
+**Dokumentasi Package View Cabang:**
+
+<img width="143" height="44" alt="Screenshot 2026-11-07 183142" src="https://github.com/user-attachments/assets/39405320-c3c5-47b8-af93-025a0e1f76cb" />
+
+**Dokumentasi Package View Pelanggan:**
+
+<img width="136" height="46" alt="Screenshot 2026-11-07 183153" src="https://github.com/user-attachments/assets/8ff8be19-ae79-42a7-8342-3349a6454c64" />
+
+
+### 6. Package View Pusat
+
+Package `view.pusat` berisi class antarmuka yang digunakan oleh pengguna dengan peran Pusat. Package ini mendukung kegiatan pengelolaan dan pemantauan operasional aplikasi RELAY melalui tampilan yang disediakan untuk pengguna Pusat.
+
+Fungsi antarmuka pada bagian Pusat mencakup akses ke dashboard, pengelolaan laporan bulanan, serta registrasi akun internal sesuai fitur yang tersedia dalam aplikasi.
+
+**Dokumentasi Package View Pusat:**
+
+<img width="140" height="47" alt="Screenshot 2026-11-07 183205" src="https://github.com/user-attachments/assets/9296a1e9-5030-485c-afc2-eede100eeb11" />
 
 
 
-**2. Package DAO dan Main**
-
-Package `dao` berisi class Data Access Object yang bertugas mengelola akses dan manipulasi data pada database menggunakan Hibernate, seperti `PenggunaDAO`, `PesananDAO`, dan `PengirimanDAO`. Sementara itu, package `main` berisi class `Main.java` yang berfungsi sebagai titik awal untuk menjalankan aplikasi RELAY.
-
-<img width="238" height="216" alt="Screenshot 2026-11-07 090950" src="https://github.com/user-attachments/assets/25e58e18-b23c-499d-9c38-d907c9074b0f" />
-
-
-**3. Package Model dan Util**
-
-Package `model` menyimpan class yang merepresentasikan entitas data aplikasi, seperti pengguna, pesanan, pengiriman, pembayaran, dan layanan. Sementara itu, package `util` menyediakan fungsi pendukung aplikasi melalui class `PasswordHash.java`.
-
-<img width="243" height="211" alt="Screenshot 2026-11-07 091002" src="https://github.com/user-attachments/assets/75a6f168-8fca-463b-8e44-d16b2e6df4f0" />
-
-**4. Package View dan View Agen**
-
-Package `view` menyediakan class antarmuka utama aplikasi, seperti halaman login dan registrasi pelanggan. Sementara itu, package `view.agen` berisi class antarmuka yang mendukung aktivitas Agen, termasuk pengelolaan pesanan dan data pengiriman.
-
-<img width="242" height="219" alt="Screenshot 2026-11-07 091010" src="https://github.com/user-attachments/assets/f98efc94-020a-4a58-8e0f-2e4be0e3ae23" />
-
-**5. Package View Cabang dan View Pelanggan**
-
-Package `view.cabang` berisi class antarmuka untuk mendukung kegiatan operasional Cabang. Sementara itu, package `view.pelanggan` menyediakan halaman untuk membuat pesanan, mengelola informasi akun, dan melihat riwayat pesanan pelanggan.
-
-<img width="247" height="214" alt="Screenshot 2026-11-07 091018" src="https://github.com/user-attachments/assets/6ea17bd1-6b56-41e0-86ca-aacd43ab3656" />
-
-**6. Package View Pusat**
-
-Package `view.pusat` berisi class antarmuka yang dirancang untuk mendukung pengelolaan kegiatan Pusat, seperti dashboard, laporan bulanan, serta registrasi akun internal.
-
-<img width="240" height="160" alt="Screenshot 2026-11-07 091026" src="https://github.com/user-attachments/assets/89eeeffc-e44e-46e9-b606-cf6ba07d47a3" />
 
 
 Keterangan package:
