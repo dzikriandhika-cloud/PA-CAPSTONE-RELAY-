@@ -305,6 +305,78 @@ dengan entitas masing-masing melalui Hibernate.
 
 ## 6. Perancangan Basis Data
 
+
+### Dokumentasi Perancangan Sistem
+
+**1. Use Case Diagram RELAY**
+
+Use Case Diagram menggambarkan interaksi antara pengguna dan sistem RELAY berdasarkan perannya, yaitu Pusat, Cabang, Agen, dan Pelanggan. Diagram ini menunjukkan fitur serta aktivitas yang dapat dilakukan oleh masing-masing pengguna sesuai dengan hak aksesnya.
+
+<img width="1400" height="1582" alt="Use Case Kelompok 6 Relay drawio" src="https://github.com/user-attachments/assets/0ea8a596-a8bd-442e-8964-528e7a63ecb7" />
+
+
+
+
+
+
+
+
+
+
+
+
+**2. Flowchart Menu Login**
+
+Flowchart Menu Login menggambarkan alur proses autentikasi pengguna pada aplikasi RELAY. Proses dimulai dari pengisian username dan password, dilanjutkan dengan validasi akun. Jika data benar, sistem mengarahkan pengguna ke menu sesuai perannya, yaitu Pusat, Cabang, Agen, atau Pelanggan. Jika data tidak sesuai, sistem menampilkan notifikasi kegagalan login.
+
+<img width="8820" height="13620" alt="Flowchart Kelompok 6 Relay-Menu Login drawio" src="https://github.com/user-attachments/assets/a0ac5e96-2c49-45ce-b63b-75a071d4c3cb" />
+
+
+
+
+
+
+
+**3. Flowchart Menu Pelanggan**
+
+Flowchart Menu Pelanggan menjelaskan aktivitas yang dapat dilakukan pelanggan dalam aplikasi RELAY. Fitur utamanya meliputi pembuatan pesanan pengiriman dengan mengisi data pengirim dan penerima, melihat riwayat pesanan berdasarkan nomor resi, serta mengelola informasi akun pelanggan.
+
+<img width="2860" height="14020" alt="Flowchart Kelompok 6 Relay-Registrasi Akun Pelanggan drawio" src="https://github.com/user-attachments/assets/d9877ce9-fb58-489c-8354-85dd831206dc" />
+
+
+
+
+
+
+**4. Flowchart Menu Agen**
+
+Flowchart Menu Agen menggambarkan proses pengelolaan pesanan dan pengiriman pada tingkat Agen. Aktivitas yang dilakukan meliputi penambahan data pesanan, menampilkan dan mencari pesanan, mengubah atau menghapus data pesanan, serta melakukan penerimaan barang dari Cabang. Setiap perubahan data dikelola melalui database RELAY.
+
+<img width="11764" height="16384" alt="Flowchart Kelompok 6 Relay-Menu Agen drawio" src="https://github.com/user-attachments/assets/a2883e62-98dd-4a74-a082-f21fae5b745b" />
+
+
+
+
+
+**5. ERD Logical RELAY**
+
+ERD Logical menggambarkan rancangan konseptual basis data RELAY yang terdiri dari sembilan entitas utama, yaitu lokasi operasional, cabang, agen, pengguna, layanan, tarif wilayah, pesanan, pengiriman, dan pembayaran. Diagram ini memperlihatkan atribut serta hubungan antarentitas sebagai dasar pengembangan database aplikasi.
+
+<img width="3147" height="3344" alt="ERDLogicalRelay" src="https://github.com/user-attachments/assets/1539867b-57f9-4300-8045-041e49131474" />
+
+
+
+
+
+
+**6. ERD Relational RELAY**
+
+ERD Relational menunjukkan implementasi rancangan basis data RELAY dalam bentuk tabel yang saling berhubungan. Diagram ini menggambarkan struktur atribut, tipe data, Primary Key (PK), Foreign Key (FK), serta relasi antartabel. Perancangan tersebut digunakan untuk mendukung pengelolaan dan menjaga keterkaitan data pada database MySQL.
+
+<img width="6295" height="5160" alt="ERDRelationalRelay" src="https://github.com/user-attachments/assets/88f89137-0ed8-41aa-a801-6ddaeea5e947" />
+
+
+
 Database yang digunakan bernama **`relay`** dan terdiri dari sembilan
 tabel berikut.
 
