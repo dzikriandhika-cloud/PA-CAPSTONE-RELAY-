@@ -26,7 +26,7 @@ Project ini menggabungkan penerapan konsep Pemrograman Berorientasi
 Objek (PBO) pada struktur aplikasi Java dan konsep Sistem Basis Data
 (SBD) pada perancangan serta pengelolaan data.
 
-## 2. Anggota Kelompok
+## 2. Contributor
 
 | No. | Nama                       | NIM        |
 |-----|----------------------------|------------|
@@ -40,7 +40,7 @@ Objek (PBO) pada struktur aplikasi Java dan konsep Sistem Basis Data
 **Universitas:** Universitas Mulawarman  
 **Tahun:** 2026
 
-## 3. Fitur Aplikasi
+## 3. Fitur Utama Program
 
 ### 3.1 Fitur Pelanggan
 
@@ -91,7 +91,7 @@ Fitur Cabang dalam rancangan sistem meliputi:
 - Mencari data pengiriman berdasarkan nomor resi.
 - Memperbarui jadwal pengiriman ke Agen penerima.
 
-## 4. Penerapan Konsep PBO
+## 4.Penerapan 4 Pilar OOP
 
 ### 4.1 Encapsulation
 
@@ -185,7 +185,7 @@ Setiap class DAO menyediakan implementasi method yang sama, seperti `tambah()`, 
 
 
 
-## 5. Arsitektur dan Struktur Package
+## 5. Struktur Folder/Package
 
 Aplikasi memisahkan tanggung jawab program ke dalam beberapa package:
 
@@ -318,9 +318,6 @@ Setiap class DAO memiliki fungsi pengelolaan data sesuai
 dengan entitas masing-masing melalui Hibernate.
 
 
-
-
-
 ## 6. Perancangan Sistem
 
 ### Dokumentasi Perancangan Sistem
@@ -444,7 +441,7 @@ Pada laporan SBD, penerapan query mencakup:
   `NON-EQUI JOIN`, `SELF JOIN`, `NATURAL JOIN`, `SEMI JOIN`, dan
   `ANTI JOIN`.
 
-## 7. Teknologi dan Tools
+## 7. Tech Stack (Teknologi dan Tools)
 
 | Teknologi/Tools               | Kegunaan                                                               |
 |-------------------------------|------------------------------------------------------------------------|
