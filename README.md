@@ -72,7 +72,8 @@ Pusat merupakan pengguna yang berperan dalam memantau hasil operasional dan meng
 
 Fitur Pusat dalam rancangan sistem meliputi:
 
-- Menampilkan dashboard yang berisi informasi operasional dan visualisasi laporan.
+
+- Menampilkan dashboard yang berisi Key Performance Indicator (KPI) untuk memantau kinerja operasional RELAY.
 - Melihat laporan bulanan total hasil pendapatan.
 - Memfilter laporan berdasarkan data yang tersedia.
 - Melakukan registrasi akun internal untuk kebutuhan operasional RELAY.
