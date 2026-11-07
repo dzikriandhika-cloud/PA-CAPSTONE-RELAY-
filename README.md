@@ -639,16 +639,12 @@ Dashboard Cabang menyediakan menu Pengiriman ke Cabang, Terima Barang Cabang, da
    
 ## 10. Catatan Implementasi
 
-- Role Pusat dan Cabang sudah tersedia pada rancangan basis data serta
-  memiliki class controller, tetapi halaman dashboard untuk kedua role
-  tersebut belum tersedia pada versi antarmuka yang disertakan.
-- Beberapa tombol pada dashboard Agen, seperti penghapusan, perubahan
-  pesanan, dan penerimaan barang dari Cabang, belum dihubungkan ke
-  proses aktif pada antarmuka.
-- Sebelum menguji proses transaksi pengiriman, pastikan nilai status
-  pengiriman yang dikirim oleh aplikasi sesuai dengan nilai `ENUM` pada
-  tabel `pengiriman` di MySQL. Pada source code saat ini terdapat nilai
-  status yang perlu diselaraskan.
+- Aplikasi RELAY menyediakan antarmuka untuk empat peran pengguna, yaitu Pelanggan, Agen, Pusat, dan Cabang.
+- Dashboard masing-masing peran telah dapat ditampilkan melalui aplikasi desktop berbasis Java Swing.
+- Sistem menggunakan Hibernate untuk menghubungkan aplikasi dengan database MySQL.
+- Beberapa fitur dan proses transaksi masih memerlukan pengujian lebih lanjut untuk memastikan kesesuaian antara alur aplikasi, controller, dan struktur database.
+- Pengujian transaksi pengiriman perlu memperhatikan kesesuaian nilai status pengiriman dengan tipe data ENUM pada tabel `pengiriman` di MySQL.
+
 
 ## 11. Keamanan dan Penggunaan Data
 
