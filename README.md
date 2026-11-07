@@ -68,26 +68,27 @@ Fitur Agen meliputi:
 
 ### 3.3 Fitur Pusat
 
-Pusat merupakan bagian yang bertanggung jawab terhadap pengelolaan dan pengawasan kegiatan operasional RELAY secara keseluruhan.
+Pusat merupakan pengguna yang berperan dalam memantau hasil operasional dan mengelola akun internal pada sistem RELAY.
 
-Dalam rancangan sistem, peran Pusat meliputi:
+Fitur Pusat dalam rancangan sistem meliputi:
 
-- Mengelola informasi operasional yang berkaitan dengan Cabang dan Agen.
-- Memantau kegiatan pengiriman pada jaringan operasional RELAY.
-- Mengelola informasi akun internal sesuai kebutuhan sistem.
-
+- Menampilkan dashboard yang berisi informasi operasional dan visualisasi laporan.
+- Melihat laporan bulanan total hasil pendapatan.
+- Memfilter laporan berdasarkan data yang tersedia.
+- Melakukan registrasi akun internal untuk kebutuhan operasional RELAY.
 
 ### 3.4 Fitur Cabang
 
-Cabang merupakan bagian operasional RELAY yang menghubungkan kegiatan pengiriman pada tingkat Pusat dan Agen.
+Cabang merupakan pengguna yang bertugas mengelola jadwal dan proses penerimaan pengiriman barang pada wilayah operasionalnya.
 
-Dalam rancangan sistem, peran Cabang meliputi:
+Fitur Cabang dalam rancangan sistem meliputi:
 
-- Mengelola informasi operasional pengiriman yang berkaitan dengan Cabang.
-- Memantau data dan perkembangan status pengiriman.
-- Mendukung koordinasi kegiatan pengiriman antara Pusat dan Agen.
-
-
+- Menambahkan jadwal pengiriman ke Cabang penerima.
+- Menampilkan jadwal pengiriman yang diterima Cabang.
+- Mencatat penerimaan barang dari Cabang pengirim.
+- Menampilkan data pesanan pelanggan.
+- Mencari data pengiriman berdasarkan nomor resi.
+- Memperbarui jadwal pengiriman ke Agen penerima.
 
 ## 4. Penerapan Konsep PBO
 
