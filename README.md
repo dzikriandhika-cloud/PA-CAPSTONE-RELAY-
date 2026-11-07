@@ -429,9 +429,10 @@ Flowchart Menu Login menggambarkan alur proses autentikasi pengguna pada aplikas
 
 **3. Flowchart Menu Pelanggan**
 
-Flowchart Menu Pelanggan menjelaskan aktivitas yang dapat dilakukan pelanggan dalam aplikasi RELAY. Fitur utamanya meliputi pembuatan pesanan pengiriman dengan mengisi data pengirim dan penerima, melihat riwayat pesanan berdasarkan nomor resi, serta mengelola informasi akun pelanggan.
+Flowchart Menu Pelanggan menggambarkan alur aktivitas pelanggan dalam aplikasi RELAY. Pada menu ini, pelanggan dapat memilih empat fitur utama, yaitu membuat pesanan, melihat riwayat pesanan, mengelola akun, dan kembali ke menu login. Pada fitur membuat pesanan, pelanggan mengisi data pengiriman dan memilih layanan yang tersedia. Pada fitur riwayat pesanan, pelanggan dapat mencari informasi pesanan menggunakan nomor resi. Sementara itu, fitur kelola akun memungkinkan pelanggan memperbarui informasi akun dengan melalui proses validasi data. Setelah proses selesai, sistem menyimpan atau menampilkan informasi yang sesuai dan pengguna dapat kembali ke Menu Pelanggan.
 
-<img width="7342" height="16384" alt="Flowchart Kelompok 6 Relay-Menu Pelanggan drawio" src="https://github.com/user-attachments/assets/e392c404-5597-4c71-9dd9-2f97fd799a47" />
+<img width="915" height="2042" alt="Flowchart Kelompok 6 Relay-Menu Pelanggan jpg" src="https://github.com/user-attachments/assets/38e515c2-f399-4308-bc22-5ff6b1bd569c" />
+
 
 
 
