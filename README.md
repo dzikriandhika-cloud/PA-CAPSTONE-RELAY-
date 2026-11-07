@@ -321,8 +321,7 @@ dengan entitas masing-masing melalui Hibernate.
 
 
 
-## 6. Perancangan Basis Data
-
+## 6. Perancangan Sistem
 
 ### Dokumentasi Perancangan Sistem
 
